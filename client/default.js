@@ -18,5 +18,5 @@ module.exports = function anonymous(obj
     return '';
   };
 
-  return "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>" + escape(obj.title) + "</title>\n    <link rel=\"stylesheet\" href=\"/mocha.css\">\n    <script src=\"/duotest.js\"></script>\n    <script src=\"/mocha.js\"></script>\n    <script src=\"/sinon.js\"></script>\n  </head>\n  <body>\n    <div id=\"mocha\"></div>\n    <script>mocha.setup(" + obj.opts + ")</script>\n    <script src=\"" + escape(obj.build) + "\"></script>\n    <script>duotest(mocha.run());</script>\n  </body>\n</html>\n"
+  return "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>" + escape(obj.title) + "</title>\n    <link rel=\"stylesheet\" href=\"/mocha.css\">\n    <link rel=\"stylesheet\" href=\"/css/application.css\">\n    <script src=\"/duotest.js\"></script>\n    <script src=\"/mocha.js\"></script>\n    <script src=\"/sinon.js\"></script>\n  </head>\n  <body>\n    <div id=\"mocha\"></div>\n    <script>mocha.setup(" + obj.opts + ")</script>\n    <script src=\"" + escape(obj.build) + "\"></script>\n    <script>duotest(mocha.run());</script>\n  </body>\n</html>\n"
 }
